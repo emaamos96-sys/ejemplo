@@ -5,19 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
+     <link rel="stylesheet" href="style.css?v=3" />
 </head>
 
 <body>
 
-    <hader>
-        <nav style="height: 200px;width: 1300px;background-color: rgba(180, 180, 180, 0.911);display: flex;">
-            <img src="img/logo.png" style="height: 170px; width: 170px;">
-            <ul style="margin-left: 950px;list-style: none;">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Acerca de Nosotros</a></li>
-                <li><a href="formulario.html">Contacto</a></li>
-            </ul>
-        </nav>
+    <header>
+       <nav class="navegacion">
+    <a href="index.html" class="brand">
+      <img src="img/logo.png" class="navegacion_logo" alt="Logo HowWeDo">
+    </a>
+
+    <!-- Toggle del menú (sin JS) -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+    <label for="menu-toggle" class="menu-icon" aria-label="Abrir menú">☰</label>
+
+    <ul class="navegacion_links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Acerca de Nosotros</a></li>
+      <li><a href="formulario.html">Contacto</a></li>
+    </ul>
+  </nav>
 
 <div style="height: 500px;width: 1300px;background-color: rgb(247, 140, 107) ;margin-top: 20px;">
 <h1>Formulario de Contacto</h1>
@@ -41,7 +49,7 @@
         </footer>
        
 
-    </hader>
+    </header>
 
 
 
