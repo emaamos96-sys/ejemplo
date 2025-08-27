@@ -330,3 +330,40 @@ header, .navegacion { height: auto !important; } /* por si algo lo limitaba */
   }
   .navegacion{ padding-top:12px; padding-bottom:12px; }
 }
+
+/* ===== LOGO GRANDE EN TODAS LAS PANTALLAS ===== */
+:root{
+  --logo-desk: 140px;   /* subí a 156/168 si querés más */
+  --logo-mob:  100px;   /* subí a 112/120 si querés más */
+}
+
+/* Asegura que el contenedor no limite al logo */
+header, .navegacion{ height:auto !important; align-items:center; }
+.navegacion{ gap:16px; padding:14px 18px; }
+.navegacion .brand{ display:block; flex:0 0 auto; line-height:0; }
+
+/* Desktop / tablets grandes */
+@media (min-width: 769px){
+  .navegacion .brand img.navegacion_logo{
+    display:block;
+    height:var(--logo-desk) !important;
+    width:auto !important;
+    max-width:none !important;
+    object-fit:contain;
+    transform-origin:left center;
+  }
+  /* Si el menú queda muy cerca, bajá un poco el gap: */
+  .navegacion_links{ gap:20px; }
+}
+
+/* Mobile */
+@media (max-width: 768px){
+  .navegacion .brand img.navegacion_logo{
+    display:block;
+    height:var(--logo-mob) !important;
+    width:auto !important;
+    max-width:none !important;
+    object-fit:contain;
+    transform-origin:left center;
+  }
+}
