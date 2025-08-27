@@ -301,3 +301,32 @@ section{
     object-fit: contain;
   }
 }
+
+/* ===== LOGO MÁS GRANDE (desktop + mobile) ===== */
+:root{
+  --logo-desktop: 120px; /* subí a 128/136 si querés más */
+  --logo-mobile: 92px;   /* subí a 96/104 si lo querés aún más grande */
+}
+
+header, .navegacion { height: auto !important; } /* por si algo lo limitaba */
+
+@media (min-width: 769px){
+  .navegacion_logo{
+    height: var(--logo-desktop) !important;
+    width: auto !important;
+    max-width: none !important;
+    object-fit: contain;
+    display: block;
+  }
+  .navegacion{ padding-top:14px; padding-bottom:14px; }
+}
+
+@media (max-width: 768px){
+  .navegacion_logo{
+    height: var(--logo-mobile) !important;
+    width: auto !important;
+    max-width: none !important;
+    object-fit: contain;
+  }
+  .navegacion{ padding-top:12px; padding-bottom:12px; }
+}
